@@ -1,16 +1,19 @@
 
 import './App.scss';
 import './_reset.scss';
-// import './App.scss';
+import axios from 'axios';
+import { Button, ButtonToolbar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/header/header';
+
 
 function App() {
   return (
     <>
     <div className="App">
-        <header>
-          <h1>Book & Brunch</h1>
-        </header>
+      <Header />
     </div>
+    
     </>
   );
 }
