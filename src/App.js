@@ -1,11 +1,17 @@
 
-import './App.css';
+import './App.scss';
+import './_reset.scss';
+// import './App.scss';
 
 function App() {
   return (
+    <>
     <div className="App">
-      <h1>hello</h1>
+        <header>
+          <h1>Book & Brunch</h1>
+        </header>
     </div>
+    </>
   );
 }
 
