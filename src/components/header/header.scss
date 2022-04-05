@@ -12,6 +12,7 @@ header {
   .subNav {
     font-size: 40px;
     padding-left: 25px;
+    cursor: pointer;
   }
   .title{
     display: inline;
@@ -41,19 +42,21 @@ header {
   }
 }
 
-.nav {
+.sideNavBar {
   position: absolute;
   top: 0;
-  left: -261px;
+  left: 0;
   z-index: 5;
   width: 260px;
   height: 100vh;
   background: white;
   border: 1px solid #ddd;
+  animation: navBar-show 0.5s;
+  overflow: hidden;
 
   .navTopMenu {
-    width: inherit;
-    height: 259px;
+    width: (inherit - 1px);
+    height: 240px;
     text-align: center;
     background: #f8f8f8;
     border-bottom: 1px solid #ddd;
@@ -68,6 +71,7 @@ header {
       font-family: 'Georgia';
       font-style: italic;
       color: #666;
+      margin-bottom: 0px;
       small {
         font-size: 10px;
         font-family: 'Georgia';
@@ -75,6 +79,77 @@ header {
         color: #959595;
       }
     }
+    .navTopMenuStartBtn {
+      vertical-align: baseline;
+      width: 120px;
+      height: 30px;
+      border-radius: 16px;
+      border: 1px solid #00c3bd;
+      font-size: 12px;
+      color: #00c3bd;
+      margin-top: 13px;
+      background-color: #fff;
+    }
   }
 
+  .navSideBarMenu {
+    padding-top: 25px;
+    height: 600px;
+    .navSideList {
+      text-align: center;
+      padding-left: 10px;
+      height: 13px;
+      line-height: 13px;
+      .sideList{
+        width: 240px;
+        font-size: 13px;
+        font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
+        font-weight: 400;
+        color: #333;
+        padding: 10px 0;
+      }
+      .sideList:hover{
+        color: #00c3bd;
+        transition: all 500ms;
+        cursor: pointer;
+      }
+    }
+  }
+  .accountForget {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    text-decoration: underline;
+    font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
+    color: #666;
+  }
+  .accountForget:hover{
+    color: #333;
+    cursor: pointer;
+    transition: all 300ms;
+  }
+}
+
+// .navBarAni-enter {
+//   // position: absolute;
+//   // top: 0;
+//   // left: -261px;
+//   opacity: 0;
+// }
+
+// .navBarAni-active {
+//   // position: absolute;
+//   // top: 0;
+//   // left: 0px;
+//   opacity: 1;
+//   transition: all 2000ms;
+// }
+
+@keyframes navBar-show {
+  from {
+    left: -260px;
+  }
+  to {
+    left: 0;
+  }
 }

@@ -1,10 +1,10 @@
-
+import React, { useState } from 'react'
 import './App.scss';
 import './_reset.scss';
 import axios from 'axios';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/header/header';
+import Header from './components/Header/Header';
 
 
 function App() {
