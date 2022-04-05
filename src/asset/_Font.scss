@@ -1,0 +1,32 @@
+@mixin NotoSans() {
+  font-family: 'Noto Sans',sans-serif;
+}
+
+@mixin NotoSans_14() {
+  font-family: 'Noto Sans',sans-serif;
+  font-size: 14px;
+}
+
+@mixin NotoSans_18() {
+  font-family: 'Noto Sans',sans-serif;
+  font-size: 18px;
+}
+
+@mixin NotoSans_24() {
+  font-family: 'Noto Sans',sans-serif;
+  font-size: 24px;
+}
+
+@mixin Nanum_40() {
+  font-family: "Nanum Myeongjo",sans-serif;
+  font-size: 40px;
+}
+
+@mixin Nanum_32() {
+  font-family: "Nanum Myeongjo",sans-serif;
+  font-size: 32px;
+}
+
+@mixin DemiLight(){
+  font-family: "Noto Sans DemiLight", "Malgun Gothic";
+}
