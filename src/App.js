@@ -30,7 +30,7 @@ function App() {
         <div className='slideBase'>
           <div className='slideMenu'>
             {
-              state.map((a, i) => {
+              state.reducer.map((a, i) => {
                 return (
                   <div className='item' key={i}>
                     <h3 className='itemTitle'>{a.title}</h3>
@@ -84,6 +84,26 @@ function App() {
             $('.slideBtn').eq(1).css("text-decoration", 'none');
             $('.slideBtn').eq(2).css("text-decoration", 'none');
           }}>04</button>
+        </div>
+
+        <div className='keyword'>
+          <div>
+            <p className='keywordTitle'>BOOK&BRUNCH KEYWORD</p>
+            <p className='keywordSubTitle'>키워드로 분류된 다양한 글 모음</p>
+          </div>
+          <div className='keywordCarouselFrame'>
+            <div className='keywordCarousel'>
+                {
+                state.reducer2.map((a, i) => {
+                  return (
+                    <div className='keywordSpace' key={i}>
+                      <p className='keywordContent'>{a.title}</p>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
         </div>
     </div>
     </>

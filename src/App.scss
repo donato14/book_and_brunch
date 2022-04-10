@@ -1,5 +1,9 @@
 @import './asset/_Font.scss';
 
+body {
+  overflow-x: hidden;
+}
+
 .introSection {
   width: 960px;
   margin: 0 auto;
@@ -44,6 +48,7 @@
   margin: 0 auto;
   background: tomato;
   text-align: center;
+
   .slideMenu {
     width: 3840px;
     height: 520px;
@@ -255,5 +260,62 @@
     font-weight: 900;
     color: #999;
     // text-decoration: 2px underline;
+  }
+}
+
+.keyword {
+  width: 961px;
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+  .keywordTitle {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #333;
+    font-family: "Kannada MN", "Jacques Francois";
+    margin-bottom: 5px;
+  }
+  .keywordSubTitle {
+    font-size: 12px;
+    color: #999;
+  }
+  .keywordCarouselFrame {
+    margin-top: 50px;
+  }
+  .keywordCarousel {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    row-gap: 1px;
+    column-gap: 1px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    background-color: #eee;
+  }
+  .keywordSpace {
+    width: 119px;
+    height: 119px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 10;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #666;
+    @include DemiLight();
+  }
+  .keywordContent {
+    position: absolute;
+    top: 40%;
+    width: inherit;
+    display: block;
+  }
+  .keywordSpace:hover {
+    box-sizing: border-box;
+    border: 1px solid #00c3bd;
+    color: #00c3bd;
   }
 }
